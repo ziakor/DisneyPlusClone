@@ -1,38 +1,34 @@
-import { useState, useEffect } from "react";
-import "../../styles/globals.css";
-import type { AppProps } from "next/app";
-import Header from "../components/layouts/header/header";
-import Footer from "../components/layouts/Footer/footer";
-import {store} from '../components/redux/store';
-import { Provider } from 'react-redux';
+import { useState, useEffect } from 'react'
+import '../../styles/globals.css'
+import type { AppProps } from 'next/app'
+import { store } from '../components/redux/store'
+import { Provider } from 'react-redux'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(true)
 
   useEffect(() => {
     setTimeout(function () {
-      setLoading(false);
-    }, 250);
+      setLoading(false)
+    }, 250)
 
     return () => {
-      setLoading(true);
-    };
-  }, [pageProps]);
+      setLoading(true)
+    }
+  }, [pageProps])
 
   return (
     <>
-    <Provider store={store}>
-      <Header />
-
-      <section
-        className={loading === true ? "dark:animate-none animate-Loading " : ""}
-      >
-        <Component {...pageProps} />
-      </section>
-
-      <Footer />
+      <Provider store={store}>
+        <section
+          className={
+            loading === true ? 'dark:animate-none animate-Loading ' : ''
+          }
+        >
+          <Component {...pageProps} />
+        </section>
       </Provider>
     </>
-  );
+  )
 }
-export default MyApp;
+export default MyApp
