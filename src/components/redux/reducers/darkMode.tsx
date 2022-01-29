@@ -1,24 +1,21 @@
-import React, { useState } from "react";
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit'
 
-
-
-const darkmodeStatus = typeof window !== 'undefined' ? localStorage.getItem('theme') : null
-
+const darkmodeStatus =
+  typeof window !== 'undefined' ? localStorage.getItem('theme') : null
 
 export const themeMode = createSlice({
-  name: "themeMode",
+  name: 'themeMode',
   initialState: {
     value: darkmodeStatus,
   },
   reducers: {
     changeDarkMode: (state, action) => {
-      state.value = action.payload;
+      state.value = action.payload
     },
   },
-});
+})
 
 // Action creators are generated for each case reducer function
-export const { changeDarkMode } = themeMode.actions;
+export const { changeDarkMode } = themeMode.actions
 
-export default themeMode.reducer;
+export default themeMode.reducer

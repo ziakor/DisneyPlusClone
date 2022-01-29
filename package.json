@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "disney-plus-clone",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
+    "@svgr/webpack": "^6.2.0",
     "eslint": "^8.7.0",
     "next": "^12.0.0",
     "react": "^17.0.2",
