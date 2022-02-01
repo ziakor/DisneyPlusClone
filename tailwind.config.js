@@ -28,6 +28,11 @@ module.exports = {
       borderWidth: {
         1: '1px',
       },
+      lineHeight: {
+        11: '3rem',
+        11.5: '3.25rem',
+        12: '3.5rem',
+      },
     },
   },
   variants: {

@@ -9,7 +9,7 @@ interface NavigationButtonInterface {
 function NavigationButton(props: NavigationButtonInterface) {
   return (
     <Link href={props.path} passHref>
-      <span className={props.class}>{props.title}</span>
+      <div className={props.class}>{props.title}</div>
     </Link>
   )
 }
